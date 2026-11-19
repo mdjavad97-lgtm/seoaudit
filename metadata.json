@@ -1,0 +1,6 @@
+{
+  "name": "سئوآدیت پرو — پلتفرم تولید گزارش آنالیز و استراتژی سئو",
+  "description": "پلتفرم چندپروژه‌ای تولید گزارش آنالیز سئو (SEO Audit & Strategy Generator) با پردازش GSC و Screaming Frog، اتصال به PageSpeed Insights، موتور تحلیل هوش مصنوعی Gemini و خروجی گرافیکی Chart.js و PDF A4 به همراه پکیج کامل PHP 8.1 و MySQL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

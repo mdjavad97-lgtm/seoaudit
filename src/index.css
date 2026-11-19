@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+    direction: rtl;
+  }
+
+  .font-mono,
+  .tabular-nums {
+    font-family: 'JetBrains Mono', 'Vazirmatn', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Rich text content styling inside report sections */
+.seo-prose h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.dark .seo-prose h3 {
+  color: #f8fafc;
+}
+.seo-prose p {
+  line-height: 1.85;
+  margin-bottom: 0.75rem;
+  color: #334155;
+}
+.dark .seo-prose p {
+  color: #cbd5e1;
+}
+.seo-prose ul {
+  list-style-type: disc;
+  padding-right: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+.seo-prose li {
+  line-height: 1.8;
+  margin-bottom: 0.35rem;
+  color: #334155;
+}
+.dark .seo-prose li {
+  color: #cbd5e1;
+}
+.seo-prose strong {
+  font-weight: 700;
+  color: #0f172a;
+}
+.dark .seo-prose strong {
+  color: #ffffff;
+}
+
+/* Standard A4 Print Optimization (@media print) */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 12mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-avoid-break,
+  table,
+  tr,
+  canvas,
+  .chart-container,
+  .report-section-block {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .print-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+}
